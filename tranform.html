@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css practice</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            min-height: 20rem;
+            border: 2px solid black;
+            width: 15rem;
+            padding: 5px;
+            color: white;
+            /* display: flex; */
+            position: relative;
+            top: 50%;
+            bottom: 50%;
+        }
+
+        .box1 {
+            height: 5rem;
+            border: 2px solid;
+            background-color: green;
+            width: 5rem;
+            margin: 5px;
+            padding: 5px;
+            transition: all .5s ease-in;
+        }
+
+        .f-cap {
+            text-transform: capitalize;
+            /* Capitalizes the first letter */
+        }
+
+        .box1:hover {
+            width: 10rem;
+            border: 2px solid black;
+        }
+
+        .box2 {
+            height: 5rem;
+            border: 2px solid;
+            background-color: pink;
+            width: 5rem;
+            margin: 5px;
+            transition: all .5s ease-in;
+            text-transform: capitalize;
+            padding: 5px;
+            /* Capitalizes the first letter */
+        }
+
+        .box2:hover {
+            scale: 2;
+        }
+
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation: moveDiv 3s ease-in-out 1s forwards 4;
+        }
+
+        .box3:hover {
+            transform: translateX(50%);
+            /* Moves the box 50px right and 20px down on hover */
+        }
+
+        .animated-box {
+            /* width: 100px;
+            height: 100px; */
+            /* background-color: blue; */
+            /* animation: moveDiv 1s; */
+            /* Apply the animation */
+        }
+
+        @keyframes moveDiv {
+            0% {
+                transform: translateY(25px);
+                opacity: 0;
+            }
+
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Transform</h1>
+    <div class="box">
+        <div class="box1 f-cap">transition</div>
+        <div class="box2 f-cap">Scale(zoom effect)</div>
+        <div class="box3 f-cap animated-box">Translate</div>
+        <div class="bounce"></div>
+    </div>
+</body>
+
+</html>
